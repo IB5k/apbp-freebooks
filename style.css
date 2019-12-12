@@ -29,6 +29,7 @@ h2 {
 
 #script {
   border: 3px dashed black;
+  padding: 1em;
   font: inherit;
   height: auto;
 }
