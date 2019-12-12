@@ -27,6 +27,10 @@
     </p>
     <p>Feel free to tweak it or write your own! Say what this matters to <strong>you</strong>.</p>
   </header>
-  <iframe src="https://dcr.wv.gov/Pages/generalcontact.aspx" frameborder="0"></iframe>
+  <iframe
+    src="https://dcr.wv.gov/Pages/generalcontact.aspx"
+    frameborder="0"
+    onload="if(window.location.href.includes('thanks.aspx')) { window.top.location.href = '/thanks.html'; }">
+  </iframe>
 </body>
 </html>

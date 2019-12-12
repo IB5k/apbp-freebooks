@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Free Books Should Be Free</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    function copyScript() {
+      const el = document.getElementById('script')
+      const range = document.createRange();
+      range.selectNodeContents(el);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      document.execCommand('copy')
+      sel.removeAllRanges()
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Thank you</h1>
+    <h2>Your comments have been sent directly to Commissioner Betsy Jividen</h2>
+    <p>Who are <strong>we</strong>? Great quesiton.</p>
+    <p>We're the <a href="https://appalachianprisonbookproject.org">Appalachian Prison Book Project</a>. We've been working to get books (actual, tangible books) in Appalachian area prisons before tablets even existed.</p>
+    <p>If you feel so inclined, we’d love if you could <a href="https://appalachianprisonbookproject.org/get-involved/donate/">donate</a>, <a href="https://appalachianprisonbookproject.org/get-involved/volunteer/">volunteer</a>, or even just <a href="https://appalachianprisonbookproject.org">learn more</a> about us.</p>
+</body>
+</html>
