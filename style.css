@@ -27,6 +27,12 @@ h2 {
   margin: 0.5em 0;
 }
 
+#script {
+  border: 3px dashed black;
+  font: inherit;
+  height: auto;
+}
+
 iframe {
   display: block;
   margin: 0;

@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Free Books Should Be Free</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    function copyScript() {
+      const el = document.getElementById('script')
+      const range = document.createRange();
+      range.selectNodeContents(el);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      document.execCommand('copy')
+      sel.removeAllRanges()
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>Free Books Should Be Free</h1>
     <h2>Fill out the form below to send Commissioner Betsy Jividen your thoughts</h2>
+    <p>Click anywhere below to copy the script:</p>
+    <p contenteditable id="script" cols="30" rows="10" onclick="copyScript()">
+      Dear Comissioner Jividen,<br/><br/>I firmly believe…
+    </p>
+    <p>Feel free to tweak it or write your own! Say what this matters to <strong>you</strong>.</p>
   </header>
   <iframe src="https://dcr.wv.gov/Pages/generalcontact.aspx" frameborder="0"></iframe>
 </body>
