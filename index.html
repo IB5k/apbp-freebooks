@@ -5,6 +5,13 @@
   <title>Free Books Should Be Free</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script>
+    let iframeloads = 0;
+    function iframeloaded() {
+      // workaround for fact that most browsers block iframe from reading (even own) location
+      // instead, wait for 2nd onload event and assume it's the thanks
+      if(++iframeloads > 1) { window.top.location.href = '/thanks.html'; }
+    }
+
     function copyScript() {
       const el = document.getElementById('script')
       const range = document.createRange();
@@ -30,7 +37,7 @@
   <iframe
     src="https://dcr.wv.gov/Pages/generalcontact.aspx"
     frameborder="0"
-    onload="if(window.location.href.includes('thanks.aspx')) { window.top.location.href = '/thanks.html'; }">
+    onload="iframeloaded()">
   </iframe>
 </body>
 </html>
