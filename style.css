@@ -18,6 +18,10 @@ h1, h2 {
   margin: 0;
 }
 
+h1 span {
+  display: inline-block;
+}
+
 h1 {
   font-size: 72px;
 }
