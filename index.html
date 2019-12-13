@@ -20,6 +20,10 @@
       sel.removeAllRanges();
       sel.addRange(range);
       document.execCommand('copy')
+      el.classList.add('copied')
+      setTimeout(() => {
+        el.classList.remove('copied')
+      }, 1000)
       sel.removeAllRanges()
     }
   </script>
